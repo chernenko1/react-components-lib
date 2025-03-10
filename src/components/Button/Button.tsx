@@ -1,12 +1,19 @@
 import React from 'react'
-import "./Button.css";
+import "./Button.scss";
 
 export interface ICLButtonProps {
-  label:string
+  children: React.ReactNode,
+  disabled: boolean,
+  size: 'little' | 'normal',
+  mode: 'fill' | 'no-fill',
+  icon: React.ReactNode
 }
 
-export default function Button({label}:ICLButtonProps) {
+export default function Button({children, disabled, size = 'normal', mode = 'fill', icon}:ICLButtonProps) {
   return (
-    <button>{label}</button>
+      <button className={`${'btn'} ${size} ${mode}`} disabled={disabled}>
+        {icon}
+        {children}
+      </button>
   )
 }
