@@ -13,11 +13,7 @@ const Template: StoryFn<ICLButtonProps> = args => <Button {...args} />;
 export const HelloWorld = Template.bind({})
 
 HelloWorld.args = {
-  label: "Hello world"
-}
-
-export const Click = Template.bind({})
-
-Click.args = {
-  label: 'Click'
+  children: "Hello world",
+  size: 'little',
+  mode: 'fill'
 }
