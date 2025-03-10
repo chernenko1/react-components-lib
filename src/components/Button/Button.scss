@@ -1,0 +1,102 @@
+@import '/src/themes/colors.scss';
+
+.btn.fill {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  background-color: $primary;
+  justify-content: center;
+  border-radius: 6px;
+  border: none;
+  color: #FFFFFF;
+  line-height: 24px;
+  cursor: pointer;
+
+  &.little {
+    width: 137px;
+    height: 44px;
+    padding: 10px 14px;
+    font-size: 14px;
+    box-shadow: 0px 12px 30px #185dff34;
+  }
+  
+  &.normal {
+    width: 190px;
+    height: 54px;
+    padding: 11px 46px 12px 46px;
+    font-size: 16px;
+    box-shadow: 0px 12px 30px #185dff34;
+  }
+
+  &:hover {
+    background-color: #467DFF;
+  }
+
+  &.little.hover {
+    box-shadow: none;
+  }
+  
+  &:active {
+    background-color: $primary;
+    box-shadow: none;
+  }
+
+  &:focus {
+    background-color: $primary;
+  }
+
+  &:disabled {
+    background-color: #9497A1;
+    box-shadow: none;
+  }
+}
+
+.btn.no-fill {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border-radius: 6px;
+  border: none;
+  color: #292D33;
+  line-height: 24px;
+  cursor: pointer;
+
+  &.little {
+    width: 168px;
+    height: 44px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  
+  &.normal {
+    width: 190px;
+    height: 54px;
+    padding: 11px 46px 12px 46px;
+    font-size: 16px;
+    box-shadow: 0px 12px 30px #185dff34;
+  }
+
+  &:hover {
+    background-color: #467DFF;
+  }
+
+  &.little.hover {
+    box-shadow: none;
+  }
+  
+  &:active {
+    background-color: $primary;
+    box-shadow: none;
+  }
+
+  &:focus {
+    background-color: $primary;
+  }
+
+  &:disabled {
+    background-color: #9497A1;
+    box-shadow: none;
+  }
+}
