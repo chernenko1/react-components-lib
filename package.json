@@ -4,6 +4,9 @@
   "description": "",
   "license": "ISC",
   "author": "",
+  "publishConfig": {
+   "registry":"https://npm.pkg.github.com/Chernenko1"
+  },
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs",
     "storybook": "storybook dev -p 6006",
