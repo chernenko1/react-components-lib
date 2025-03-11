@@ -1,41 +1,41 @@
-@import '/src/themes/colors.scss';
+@import '/src/scss/colors.scss';
 
-.btn.fill {
+
+.btn {
   display: flex;
   column-gap: 10px;
   align-items: center;
-  background-color: $primary;
   justify-content: center;
   border-radius: 6px;
   border: none;
-  color: #FFFFFF;
   line-height: 24px;
   cursor: pointer;
+  color: #FFFFFF;
+  background-color: $primary;
+  font-size: 14px;
 
   &.little {
     width: 137px;
     height: 44px;
     padding: 10px 14px;
-    font-size: 14px;
-    box-shadow: 0px 12px 30px #185dff34;
+  }
+
+  &.normal {
+    width: 168px;
+    height: 44px;
   }
   
-  &.normal {
+  &.big {
     width: 190px;
     height: 54px;
     padding: 11px 46px 12px 46px;
     font-size: 16px;
-    box-shadow: 0px 12px 30px #185dff34;
   }
 
   &:hover {
     background-color: #467DFF;
   }
 
-  &.little.hover {
-    box-shadow: none;
-  }
-  
   &:active {
     background-color: $primary;
     box-shadow: none;
@@ -47,39 +47,65 @@
 
   &:disabled {
     background-color: #9497A1;
+    cursor: default;
+    box-shadow: none;
+  }
+}
+
+.btn.fill {
+  &.little {
+    box-shadow: 0px 12px 30px #185dff34;
+  }
+
+  &.normal {
+    box-shadow: 0px 12px 30px #185dff34;
+
+  }
+  
+  &.big {
+    font-size: 16px;
+    box-shadow: 0px 12px 30px #185dff34;
+  }
+   
+  &:disabled {
     box-shadow: none;
   }
 }
 
 .btn.no-fill {
-  display: flex;
-  column-gap: 10px;
-  align-items: center;
-  justify-content: center;
   background: none;
-  border-radius: 6px;
-  border: none;
   color: #292D33;
-  line-height: 24px;
-  cursor: pointer;
-
   &.little {
     width: 168px;
     height: 44px;
-    padding: 10px 14px;
-    font-size: 14px;
+  }
+
+  &.normal {
+    width: 218px;
+    height: 54px;
+    padding: 11px 46px;
+    font-size: 16px;
   }
   
-  &.normal {
-    width: 190px;
+  &.big {
+    width: 328px;
     height: 54px;
-    padding: 11px 46px 12px 46px;
+    padding: 11px 26px;
     font-size: 16px;
-    box-shadow: 0px 12px 30px #185dff34;
+    border: 1px $primary solid;
+    color: $primary;
+    &:hover, :focus {
+      color: #467DFF;
+      border-color: #467DFF;
+    }
+    &:disabled {
+      border-color: $grey;
+      color: $grey;
+    }
   }
 
   &:hover {
-    background-color: #467DFF;
+    color: $primary;
   }
 
   &.little.hover {
@@ -87,16 +113,45 @@
   }
   
   &:active {
-    background-color: $primary;
-    box-shadow: none;
+    color: $primary;
   }
 
   &:focus {
-    background-color: $primary;
+    color: $primary;
   }
 
   &:disabled {
-    background-color: #9497A1;
-    box-shadow: none;
+    color: $grey;
+  }
+}
+
+.btn.rounded {
+  border-radius: 50%;
+  padding: 0;
+  &::before {
+    content: '';
+    border: 2px solid rgba(255, 255, 255, 0.411); /* White border */
+    border-radius: 50%; 
+    position: absolute;
+  }
+
+  &.big {
+    width: 140px;
+    height: 140px;
+    &::before {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  &.normal {
+    width: 100px;
+    height: 100px;
+    font-size: 12px;
+    
+    &::before {
+      width: 85px;
+      height: 85px;
+    }
   }
 }
