@@ -1,18 +1,19 @@
 import React from 'react'
 import "./Button.scss";
 
-export interface ICLButtonProps {
+export interface ICLButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode,
   disabled: boolean,
-  size: 'little' | 'normal',
-  mode: 'fill' | 'no-fill',
-  icon: React.ReactNode
+  size: 'little' | 'normal' | 'big'
+  mode: 'fill' | 'no-fill' | 'none',
+  shape: 'base' | 'rounded'
 }
 
-export default function Button({children, disabled, size = 'normal', mode = 'fill', icon}:ICLButtonProps) {
+export default function Button({children, disabled, size, mode, shape, ...attributes}:ICLButtonProps) {
+  
+
   return (
-      <button className={`${'btn'} ${size} ${mode}`} disabled={disabled}>
-        {icon}
+      <button className={`${'btn'} ${size} ${mode} ${shape}`} disabled={disabled} {...attributes}>
         {children}
       </button>
   )
