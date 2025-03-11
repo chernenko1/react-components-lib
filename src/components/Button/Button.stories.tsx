@@ -17,3 +17,11 @@ HelloWorld.args = {
   size: 'little',
   mode: 'fill'
 }
+
+export const Circle = Template.bind({})
+
+Circle.args = {
+  children: 'Learn more',
+  size: 'normal',
+  shape: 'rounded'
+}
