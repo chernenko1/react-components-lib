@@ -1,4 +1,4 @@
-@import '/src/scss/colors.scss';
+@use '../../../src/scss/global';
 
 .switch-btn-container {
   display: flex;
@@ -8,7 +8,7 @@
   width: 255px;
   height: 52px;
   border-radius: 20px;
-  background-color: $tertiary;
+  background-color: global.$tertiary;
 }
 
 .switch-btn {
@@ -23,7 +23,7 @@
 
 .switch-btn.active {
   color: white;
-  background-color: $primary;
+  background-color: global.$primary;
   animation: moveActive 0.5s ease-in-out; /* Анимация перемещения */
 }
 
