@@ -1,4 +1,4 @@
-@use '../../../src/scss/global';
+@use "../../../src/scss/global";
 
 .switch-btn-container {
   display: flex;
@@ -11,27 +11,33 @@
   background-color: global.$tertiary;
 }
 
+.highlight {
+  position: absolute;
+  top: 19px;
+  left: 19px;
+  width: 125px;
+  height: 46px;
+  border-radius: 20px;
+  background-color: global.$primary;
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
 .switch-btn {
+  position: relative;
+  z-index: 1;
   width: 125px;
   height: 46px;
   padding: 16px 35px;
   border-radius: 20px;
   border: none;
   background: none;
-  transition: background-color 0.5s ease-in, color 0.5s
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
 .switch-btn.active {
   color: white;
-  background-color: global.$primary;
-  animation: moveActive 0.5s ease-in-out; /* Анимация перемещения */
-}
-
-@keyframes moveActive {
-  from {
-    transform: translateX(-10px); /* Начальная позиция */
-  }
-  to {
-    transform: translateX(0); /* Конечная позиция */
-  }
 }
